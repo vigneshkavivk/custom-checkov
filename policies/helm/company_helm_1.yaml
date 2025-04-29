@@ -1,0 +1,18 @@
+metadata:
+  id: "COMPANY_HELM_001"
+  name: "No Privileged Containers"
+  category: "SECURITY"
+  severity: "HIGH"
+  description: "Containers must not run in privileged mode"
+  guideline: "Company Security Standard CSS-001"
+definition:
+  cond_type: "attribute"
+  resource_types:
+    - "helm_template"
+  attribute: "spec.securityContext.privileged"
+  operator: "not_exists_or_false"
+  remediation: |
+    Set securityContext.privileged to false or remove it entirely.
+    Example:
+    securityContext:
+      privileged: false
