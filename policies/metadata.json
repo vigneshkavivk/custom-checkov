@@ -1,0 +1,13 @@
+{
+  "tool": {
+    "name": "Company Security Policies",
+    "version": "1.0.0",
+    "maintainer": "Company Security Team"
+  },
+  "policies": {
+    "helm": {
+      "count": 5,
+      "last_updated": "2023-11-15"
+    }
+  }
+}
