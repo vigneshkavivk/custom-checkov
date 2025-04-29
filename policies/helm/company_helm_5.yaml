@@ -1,0 +1,21 @@
+metadata:
+  id: "COMPANY_HELM_005"
+  name: "Read-Only Root Filesystem"
+  category: "SECURITY"
+  severity: "MEDIUM"
+  description: "Containers should run with read-only root filesystem"
+  guideline: "Company Security Standard CSS-005"
+definition:
+  cond_type: "attribute"
+  resource_types:
+    - "helm_template"
+  attribute: "spec.securityContext.readOnlyRootFilesystem"
+  operator: "equals"
+  value: "true"
+  remediation: |
+    Set readOnlyRootFilesystem to true and configure emptyDir volumes for writable locations:
+    securityContext:
+      readOnlyRootFilesystem: true
+    volumes:
+    - name: temp-volume
+      emptyDir: {}
