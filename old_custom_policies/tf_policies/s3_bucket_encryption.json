@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "CUSTOM_S3_BUCKET_ENCRYPTION",
+    "id": "MASA_TF_2",
     "name": "Ensure S3 Buckets Are Encrypted",
     "category": "encryption",
     "severity": "HIGH"
