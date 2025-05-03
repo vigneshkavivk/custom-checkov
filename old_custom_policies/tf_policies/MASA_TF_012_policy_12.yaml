@@ -1,0 +1,11 @@
+metadata:
+  name: "Custom Terraform Policy 12"
+  id: "MASA_TF_012"
+  category: "General Security"
+  severity: HIGH
+
+definition:
+  cond_type: attribute
+  resource_types: ["aws_generic_resource"]
+  attribute: custom_attribute_12
+  operator: exists

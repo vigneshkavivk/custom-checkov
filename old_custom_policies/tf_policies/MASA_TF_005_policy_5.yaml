@@ -1,0 +1,11 @@
+metadata:
+  name: "Custom Terraform Policy 5"
+  id: "MASA_TF_005"
+  category: "General Security"
+  severity: MEDIUM
+
+definition:
+  cond_type: attribute
+  resource_types: ["aws_generic_resource"]
+  attribute: custom_attribute_5
+  operator: exists
