@@ -1,0 +1,13 @@
+# MASA_TF_004_iam_policies_least_privilege.yaml
+metadata:
+  name: "IAM Policies Should Use Least Privilege"
+  id: "MASA_TF_004"
+  category: "iam"
+  severity: "MEDIUM"
+
+definition:
+  cond_type: "attribute"
+  resource_types: ["aws_iam_policy"]
+  attribute: "policy"
+  operator: "not_contains"
+  value: "*"
