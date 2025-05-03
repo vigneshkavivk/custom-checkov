@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "CUSTOM_EC2_NO_DEFAULT_SG",
+    "id": "MASA_TF_1",
     "name": "Ensure EC2 Instances Do Not Use Default Security Group",
     "category": "networking",
     "severity": "HIGH"
