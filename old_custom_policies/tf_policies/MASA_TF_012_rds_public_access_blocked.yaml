@@ -1,0 +1,13 @@
+# MASA_TF_012_rds_public_access_blocked.yaml
+metadata:
+  name: "RDS Instances Should Not Be Publicly Accessible"
+  id: "MASA_TF_012"
+  category: "networking"
+  severity: "HIGH"
+
+definition:
+  cond_type: "attribute"
+  resource_types: ["aws_db_instance"]
+  attribute: "publicly_accessible"
+  operator: "equals"
+  value: false
