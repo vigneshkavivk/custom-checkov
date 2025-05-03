@@ -11,7 +11,7 @@ class DefaultNamespace(BaseK8Check):
         # CIS-1.5 5.7.4
         name = "The default namespace should not be used"
         # default Service Account and Service/kubernetes are ignored
-        id = "CKV_K8S_21"
+        id = "MASA_K8S_21"
         supported_kind = (
             "Pod",
             "Deployment",
