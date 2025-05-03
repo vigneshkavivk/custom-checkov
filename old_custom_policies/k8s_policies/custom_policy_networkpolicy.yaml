@@ -1,5 +1,5 @@
 metadata:
-  id: "CUSTOM_K8S_3"
+  id: "MASA_K8S_3"
   name: "Ensure a NetworkPolicy is defined for Kubernetes pods"
   category: "Kubernetes Security Best Practices"
   severity: "MEDIUM"
