@@ -1,0 +1,13 @@
+# MASA_TF_019_no_0_0_0_0_ingress.yaml
+metadata:
+  name: "Security Groups Should Not Allow 0.0.0.0/0 Ingress"
+  id: "MASA_TF_019"
+  category: "networking"
+  severity: "CRITICAL"
+
+definition:
+  cond_type: "attribute"
+  resource_types: ["aws_security_group_rule"]
+  attribute: "cidr_blocks"
+  operator: "not_contains"
+  value: "0.0.0.0/0"
