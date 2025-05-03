@@ -1,5 +1,5 @@
 metadata:
-  id: "CUSTOM_K8S_9"
+  id: "MASA_K8S_9"
   name: "Ensure Kubernetes containers do not allow privilege escalation"
   category: "Kubernetes Security Best Practices"
   severity: "HIGH"
