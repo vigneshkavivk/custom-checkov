@@ -1,0 +1,12 @@
+# MASA_TF_016_resource_requests_set.yaml
+metadata:
+  name: "Kubernetes Pods Must Have CPU and Memory Requests"
+  id: "MASA_TF_016"
+  category: "resources"
+  severity: "MEDIUM"
+
+definition:
+  cond_type: "attribute"
+  resource_types: ["kubernetes_deployment"]
+  attribute: "spec.template.spec.containers[*].resources.requests"
+  operator: "exists"
