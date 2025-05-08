@@ -1,0 +1,12 @@
+# MASA_TF_017_no_host_path_volumes.yaml
+metadata:
+  name: "HostPath Volumes Should Not Be Used"
+  id: "MASA_TF_017"
+  category: "kubernetes"
+  severity: "HIGH"
+
+definition:
+  cond_type: "attribute"
+  resource_types: ["kubernetes_pod"]
+  attribute: "spec.volumes[*].hostPath"
+  operator: "not_exists"

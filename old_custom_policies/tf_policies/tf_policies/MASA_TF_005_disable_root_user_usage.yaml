@@ -1,0 +1,13 @@
+# MASA_TF_005_disable_root_user_usage.yaml
+metadata:
+  name: "Root User Should Not Be Used in IAM"
+  id: "MASA_TF_005"
+  category: "iam"
+  severity: "HIGH"
+
+definition:
+  cond_type: "attribute"
+  resource_types: ["aws_iam_user"]
+  attribute: "name"
+  operator: "not_equals"
+  value: "root"

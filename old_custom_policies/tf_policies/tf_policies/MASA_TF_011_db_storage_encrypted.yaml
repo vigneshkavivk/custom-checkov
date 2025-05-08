@@ -1,0 +1,13 @@
+# MASA_TF_011_db_storage_encrypted.yaml
+metadata:
+  name: "Database Storage Must Be Encrypted"
+  id: "MASA_TF_011"
+  category: "encryption"
+  severity: "CRITICAL"
+
+definition:
+  cond_type: "attribute"
+  resource_types: ["aws_db_instance"]
+  attribute: "storage_encrypted"
+  operator: "equals"
+  value: true
