@@ -1,0 +1,12 @@
+metadata:
+  name: "Require VPC Flow Logs"
+  id: "MASA_TF_NET_009"
+  category: "Networking"
+  severity: "MEDIUM"
+scope:
+  provider: "terraform"
+definition:
+  resource_types:
+    - aws_vpc
+  required_resources:
+    - aws_flow_log
