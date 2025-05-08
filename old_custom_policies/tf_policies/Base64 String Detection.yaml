@@ -4,11 +4,12 @@ metadata:
   category: "Secrets"
   framework: "all"  # Applies to all file types (Terraform, Kubernetes, etc.)
   severity: "HIGH"
+
 definition:
   cond_type: "attribute"
   resource_types:
     - "all"
-  attribute: ".*"
+  attribute: "(?i).*(secret|token|key|password).*"
   operator: "regex_match"
   value: "([A-Za-z0-9+/]{40,}={0,2})"
-  comment: "This attribute appears to contain a high-entropy Base64-encoded string, which could be a secret."
+  comment: "This attribute appears to contain a high-entropy Base64-encoded string, which could be a secret. Ensure secrets are not hardcoded."
