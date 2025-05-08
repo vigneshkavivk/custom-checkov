@@ -1,0 +1,12 @@
+metadata:
+  name: "Disallow use of default VPC"
+  id: "MASA_TF_NET_006"
+  category: "Networking"
+  severity: "MEDIUM"
+scope:
+  provider: "terraform"
+definition:
+  and:
+    - resource_types:
+        - aws_default_vpc
+        - aws_default_subnet
