@@ -1,0 +1,17 @@
+metadata:
+  name: "Disallow security group with no rules"
+  id: "MASA_TF_NET_005"
+  category: "Networking"
+  severity: "LOW"
+scope:
+  provider: "terraform"
+definition:
+  and:
+    - resource_types:
+        - aws_security_group
+    - attribute: ingress
+      condition: equals
+      value: []
+    - attribute: egress
+      condition: equals
+      value: []
