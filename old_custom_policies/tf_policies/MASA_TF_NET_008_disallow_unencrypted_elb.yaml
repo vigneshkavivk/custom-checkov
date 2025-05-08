@@ -1,0 +1,14 @@
+metadata:
+  name: "Disallow ELB without HTTPS listener"
+  id: "MASA_TF_NET_008"
+  category: "Networking"
+  severity: "MEDIUM"
+scope:
+  provider: "terraform"
+definition:
+  and:
+    - resource_types:
+        - aws_lb_listener
+    - attribute: protocol
+      condition: equals
+      value: "HTTP"
