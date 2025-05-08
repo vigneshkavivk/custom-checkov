@@ -1,0 +1,14 @@
+metadata:
+  name: "Disallow public subnets with auto-assign public IP"
+  id: "MASA_TF_NET_003"
+  category: "Networking"
+  severity: "HIGH"
+scope:
+  provider: "terraform"
+definition:
+  and:
+    - resource_types:
+        - aws_subnet
+    - attribute: map_public_ip_on_launch
+      condition: equals
+      value: true
