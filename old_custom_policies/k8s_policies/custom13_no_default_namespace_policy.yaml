@@ -1,15 +1,16 @@
 metadata:
-  name: "Ensure 'default' namespace is not used"
+  name: "Avoid using 'default' namespace in Terraform-managed Kubernetes resources"
   id: "MASA_K8S_013"
-  category: "Kubernetes Best Practices"
+  category: "Terraform Kubernetes Best Practices"
   severity: "MEDIUM"
 
 scope:
-  provider: "kubernetes"
+  provider: "terraform"
+  resource_types:
+    - "kubernetes_*"
 
 definition:
   cond_type: "attribute"
-  attribute: "metadata.namespace"
+  attribute: "metadata[0].namespace"
   operator: "not_equals"
   value: "default"
-
