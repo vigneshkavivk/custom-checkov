@@ -1,0 +1,17 @@
+metadata:
+  name: "Disallow overly permissive Network ACL rules"
+  id: "MASA_TF_NET_004"
+  category: "Networking"
+  severity: "HIGH"
+scope:
+  provider: "terraform"
+definition:
+  and:
+    - resource_types:
+        - aws_network_acl_rule
+    - attribute: cidr_block
+      condition: equals
+      value: "0.0.0.0/0"
+    - attribute: rule_action
+      condition: equals
+      value: "allow"
