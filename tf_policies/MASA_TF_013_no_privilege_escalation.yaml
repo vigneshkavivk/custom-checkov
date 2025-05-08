@@ -1,0 +1,13 @@
+# MASA_TF_013_no_privilege_escalation.yaml
+metadata:
+  name: "Kubernetes Containers Should Not Allow Privilege Escalation"
+  id: "MASA_TF_013"
+  category: "kubernetes"
+  severity: "HIGH"
+
+definition:
+  cond_type: "attribute"
+  resource_types: ["kubernetes_deployment"]
+  attribute: "spec.template.spec.containers[*].securityContext.allowPrivilegeEscalation"
+  operator: "equals"
+  value: false
